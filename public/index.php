@@ -15,9 +15,9 @@ include_once BASEDIR . '/Common/Loader.php';
 spl_autoload_register('\\Common\\Loader::autoload');
 
 $dbMysqli = \Common\Tool\Factory::createDatabase('MySqli');
-var_dump($dbMysqli);
+//var_dump($dbMysqli);
 $dbMysqli2 = \Common\Tool\Factory::createDatabase('MySqli');
-var_dump($dbMysqli2);
+//var_dump($dbMysqli2);
 
 $dbMysqli->connect('192.168.10.10', 'homestead', 'secret', 'tom');
 $res = $dbMysqli->query('select * from test');
