@@ -14,6 +14,7 @@ class Index
     public static function index()
     {
         var_dump(__METHOD__);
+        //test12;
     }
 
 }
