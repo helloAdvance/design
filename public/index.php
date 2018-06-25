@@ -19,9 +19,9 @@ $dbMysqli = \Common\Tool\Factory::createDatabase('MySqli');
 $dbMysqli2 = \Common\Tool\Factory::createDatabase('MySqli');
 //var_dump($dbMysqli2);
 
-$dbMysqli->connect('192.168.10.10', 'homestead', 'secret', 'tom');
-$res = $dbMysqli->query('select * from test');
-$dbMysqli->close();
+//$dbMysqli->connect('192.168.10.10', 'homestead', 'secret', 'tom');
+//$res = $dbMysqli->query('select * from test');
+//$dbMysqli->close();
 //var_dump($res->fetch_assoc());
 
 /*******************策略模式*******************/
@@ -50,6 +50,14 @@ $event->trigger();
 
 /*******************观察者*******************/
 
+$arrays = [
+    \Common\Observer\Observer1::class,
+    \Common\Observer\Observer2::class,
+];
 
 
 
+var_dump($arrays);
+foreach ($arrays as $class){
+    var_dump(new $class);
+}
