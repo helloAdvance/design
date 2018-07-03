@@ -47,8 +47,13 @@ $event = new  \Common\Observer\Event();
 $event->addObserver($observer1);
 $event->addObserver($observer2);
 $event->trigger();
-
 /*******************观察者*******************/
+
+echo  '<br/>多态:';
+/*******************多态*******************/
+$teacher = new  \Common\Polymorphism\Teacher();
+$teacher->drawPolygon(new \Common\Polymorphism\Rectangle());
+/*******************多态*******************/
 
 $arrays = [
     \Common\Observer\Observer1::class,
@@ -60,4 +65,5 @@ $arrays = [
 var_dump($arrays);
 foreach ($arrays as $class){
     var_dump(new $class);
+
 }
